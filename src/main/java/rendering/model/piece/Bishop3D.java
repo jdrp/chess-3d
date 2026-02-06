@@ -7,6 +7,6 @@ import java.awt.Color;
 
 public class Bishop3D extends ChessPiece3D {
     public Bishop3D(Color color) {
-        super("b", color, Util.readMeshFromObjFile("/3d/pieces/bishop.obj", color));
+        super("b", color, Util.readMeshFromObjFile("3d/pieces/bishop.obj", color));
     }
 }

@@ -7,6 +7,6 @@ import java.awt.Color;
 
 public class Queen3D extends ChessPiece3D {
     public Queen3D(Color color) {
-        super("q", color, Util.readMeshFromObjFile("/3d/pieces/queen.obj", color));
+        super("q", color, Util.readMeshFromObjFile("3d/pieces/queen.obj", color));
     }
 }

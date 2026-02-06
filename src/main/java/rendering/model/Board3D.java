@@ -48,7 +48,7 @@ public class Board3D {
         Mesh3D[] meshes = new Mesh3D[64];
         for(int i = 0; i < 8; i++)
             for(int j = 0; j < 8; j++) {
-                meshes[i*8+j] = Util.readMeshFromObjFile("/3d/board/tile.obj", ((i+j)%2==0)? Tile3D.WHITE: Tile3D.BLACK);
+                meshes[i*8+j] = Util.readMeshFromObjFile("3d/board/tile.obj", ((i+j)%2==0)? Tile3D.WHITE: Tile3D.BLACK);
                 meshes[i*8+j].move(0.5 + j-4, -.48, 0.5 + i-4);
             }
         for(int i = 0; i < 64; i++) {

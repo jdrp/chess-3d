@@ -14,6 +14,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 /**
  * Esta clase define la estructura que seguiran todas las piezas, asi como su interfaz y metodos comunes
@@ -48,12 +49,21 @@ public abstract class Pieza
         x = tile.getX();
         y = tile.getY();
         String imgFile = getImage();
+        URL url = Pieza.class.getClassLoader().getResource("2d/" + imgFile);
+
+        if (url == null) {
+            throw new IllegalStateException(
+                "Missing resource on classpath: 2d/" + imgFile +
+                " (expected at target/classes/2d/" + imgFile + ")"
+            );
+        }
+
         try{
             if (this.img == null) {
-                this.img = ImageIO.read(getClass().getResource("/2d/" + imgFile));
+                this.img = ImageIO.read(url);
             }
             } catch(IOException e){
-                System.out.println("File not found: /2d/" + imgFile);
+                throw new RuntimeException("File not found: 2d/" + imgFile, e);
             }
         }
 

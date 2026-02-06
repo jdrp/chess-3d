@@ -7,6 +7,6 @@ import java.awt.Color;
 
 public class Rook3D extends ChessPiece3D {
     public Rook3D(Color color) {
-        super("r", color, Util.readMeshFromObjFile("/3d/pieces/rook.obj", color));
+        super("r", color, Util.readMeshFromObjFile("3d/pieces/rook.obj", color));
     }
 }

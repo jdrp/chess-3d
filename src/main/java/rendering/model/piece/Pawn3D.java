@@ -7,6 +7,6 @@ import java.awt.Color;
 
 public class Pawn3D extends ChessPiece3D {
     public Pawn3D(Color color) {
-        super("p", color, Util.readMeshFromObjFile("/3d/pieces/pawn.obj", color));
+        super("p", color, Util.readMeshFromObjFile("3d/pieces/pawn.obj", color));
     }
 }

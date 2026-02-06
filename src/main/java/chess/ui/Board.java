@@ -42,7 +42,8 @@ public class Board extends JPanel implements MouseMotionListener,MouseListener {
         blackTimer = new CountdownTimerThread(300,Data.whiteTime,this);
         whiteTimer.start();
         blackTimer.start();
-        blackTimer.suspend();
+        blackTimer.setPaused(true);
+        whiteTimer.setPaused(false);
     }
 
     public void setTurn(ColorEnum turn) {

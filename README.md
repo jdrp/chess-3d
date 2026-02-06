@@ -3,7 +3,6 @@
 A 3D Chess implementation written in pure Java. This project features a custom-built 3D rendering pipeline (software renderer) to display the board and pieces, integrated with a 2D Swing interface for game logic and controls.
 
 ![Demo](docs/images/demo_screenshot.png)
-*(Note: Add a screenshot of the game running here)*
 
 ## Features
 
@@ -23,8 +22,8 @@ A 3D Chess implementation written in pure Java. This project features a custom-b
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/Chess3D.git
-   cd Chess3D
+   git clone https://github.com/jdrp/chess-3d.git
+   cd chess-3d
    ```
 
 2. **Run using Maven:**
